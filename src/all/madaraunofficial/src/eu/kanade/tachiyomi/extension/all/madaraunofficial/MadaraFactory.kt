@@ -5,9 +5,8 @@ import eu.kanade.tachiyomi.source.SourceFactory
 
 class MadaraFactory : SourceFactory {
     override fun createSources(): List<Source> = listOf(
-        MangaGecesi(),
+        Mangastk(),
         MangaWOW(),
-        Monarcamanga(),
         AhStudios(),
         KnightNoScanlation(),
         Skymanga(),
@@ -16,11 +15,7 @@ class MadaraFactory : SourceFactory {
 
 class AhStudios : Madara("AhStudios", "https://ahstudios.net", "es")
 
-class MangaGecesi : Madara("Manga Gecesi", "https://mangagecesi.com", "tr") {
-    override val chapterUrlSelector = "li.wp-manga-chapter div.chapter-thumbnail + a"
-}
-
-class Monarcamanga : Madara("Monarcamanga", "https://monarcamanga.com", "es")
+class Mangastk : Madara("Mangastk", "https://mangastk.com", "es")
 
 class MangaWOW : Madara("MangaWOW", "https://mangawow.com", "tr")
 
